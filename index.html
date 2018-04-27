@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+	<style>
+		html {
+    background-image: url("data:image/jpeg;base64,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");
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+		#list1 {
+			list-style-position: inside;
+		}
+	</style>
+	<center>
 	<head>
 	<strong>	<title>Brett Patrick</title></strong>
 		
@@ -9,10 +20,10 @@
 	</body>
 	<p>I am a 19 year old student at the University of Maryland</p>
 	
-<ul>
+<ul id="list1">
 <li style="color:red">Dreams
     <li style="color:red">Intrests
-   <style> <"font-size:40px"></style
+	    <style> <"font-size:40px"></style>
     <style> <"font-family:Arial"></style>
     <ol>soccer</ol>
     <em>
@@ -24,4 +35,5 @@
     <li style="color:red">Favorite Quotes
     <li style="color:red">Swag I got
 </ul>
+	</center>
 </html>
